@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Footer, Header } from "@/components/layout";
-import "./globals.css";
+import { Layout } from "antd";
+import "antd/dist/reset.css";
+import "@/app/globals.css";
+import { AppContent, AppFooter, AppHeader } from "./components";
 
-const inter = Inter({ subsets: ["latin"] }); // Global font
+const { Content } = Layout;
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Pricing Configurator",
@@ -19,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <Layout className="min-h-screen">
+          <AppHeader />
+          <AppContent />
+          <AppFooter />
+        </Layout>
       </body>
     </html>
   );
