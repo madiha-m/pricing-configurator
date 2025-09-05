@@ -19,13 +19,14 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+})
+ {
   return (
     <html lang="en">
       <body className={inter.className}>
         <Layout className="min-h-screen">
           <AppHeader />
-          <AppContent />
+          <AppContent >{children}</AppContent>
           <AppFooter />
         </Layout>
       </body>
