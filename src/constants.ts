@@ -1,3 +1,16 @@
+export const fadeBorderBottom = `
+  relative
+  after:content-['']
+  after:absolute
+  after:bottom-0
+  after:left-0
+  after:right-0
+  after:h-[1px]
+  after:bg-gradient-to-r
+  after:from-transparent
+  after:via-gray-700
+  after:to-transparent
+`.trim();
 
 // NAVBAR
 
