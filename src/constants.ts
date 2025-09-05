@@ -25,8 +25,27 @@ export const navTextClass = `
     ml-auto
     `.trim();
 
-// export const navListClass = `
-//     hover: bg-transparent,
-//     focus: bg-transparent,
-//     active: bg-transparent,
-//     `.trim()
+export const navButtonClass = `
+  ${navTextClass}
+  !border !border-gray-700
+  !bg-[#0a1d2d] 
+  !hover:shadow-xl 
+  !hover:border-teal-400 
+  !transition-all !duration-300
+`.trim();
+
+export const navDropdownClass = `
+  !bg-[#0a1d2d]
+  !border !border-gray-700
+  !rounded-xl
+  !shadow-lg
+`.trim();
+
+export const navDropdownItemClass = `
+  ${navTextClass}
+  !block
+  !px-10 !py-2
+  border-b border-gray-700
+  last:border-b-0
+`.trim();
+
