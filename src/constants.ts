@@ -1,5 +1,7 @@
 
-export const navLinkClass = `
+// NAVBAR
+
+export const navTextClass = `
     !text-teal-600 
     font-medium 
     transition-colors 
