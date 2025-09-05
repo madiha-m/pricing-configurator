@@ -4,6 +4,7 @@ import { Segmented, Typography } from "antd";
 import PlanCard from "./PlanCard";
 import { plans } from "../data/plans";
 import { useState } from "react";
+import BillingToggle from "./BillingToggle";
 
 const { Title } = Typography;
 
@@ -19,14 +20,7 @@ const PricingSection = () => {
         </Title>
 
         {/* Toggler */}
-        <div className="mb-12 flex justify-center">
-          <Segmented
-            options={["Monthly", "Yearly"]}
-            value={billingCycle === "monthly" ? "Monthly" : "Yearly"}
-            onChange={(val) => setBillingCycle(val.toLowerCase() as "monthly" | "yearly")}
-            className="!bg-[#0a1d2d !text-white"
-          />
-        </div>
+        <BillingToggle billingCycle={billingCycle} setBillingCycle={setBillingCycle} />
 
         {/* Cards */}
 
