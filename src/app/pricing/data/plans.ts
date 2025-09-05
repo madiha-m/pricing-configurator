@@ -2,7 +2,8 @@ export const plans = [
   {
     id: 1,
     name: "One App Free",
-    price: "$0",
+    monthlyPrice: "0",
+    yearlyPrice: "0",
     period: "/Month",
     description: "One App",
     features: ["Odoo Online"],
@@ -11,7 +12,8 @@ export const plans = [
   {
     id: 2,
     name: "Standard",
-    price: "$7.25",
+    monthlyPrice: "7.25",
+    yearlyPrice: "87",
     period: "/Month",
     description: "All Apps",
     features: ["Odoo Online"],
@@ -20,7 +22,8 @@ export const plans = [
   {
     id: 3,
     name: "Custom",
-    price: "$10.09",
+    monthlyPrice: "10.09",
+    yearlyPrice: "121.08",
     period: "/Month",
     description: "All Apps",
     features: ["Odoo Online / Odoo.sh** / On-premise", "Odoo Studio", "Multi-Company", "External API"],

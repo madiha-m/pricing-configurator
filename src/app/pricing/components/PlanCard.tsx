@@ -6,21 +6,28 @@ const { Title, Text } = Typography;
 
 interface PlanCardProps {
   name: string;
-  price: string;
+  monthlyPrice: string;
+  yearlyPrice: string;
   period: string;
   description: string;
   features: string[];
   highlight: boolean;
+  billingCycle: "monthly" | "yearly";
 }
 
 const PlanCard: React.FC<PlanCardProps> = ({
   name,
-  price,
+  monthlyPrice,
+  yearlyPrice,
   period,
   description,
   features,
   highlight,
+  billingCycle,
 }) => {
+  const price = billingCycle === "monthly" ? monthlyPrice : yearlyPrice;
+  const cycleLabel = billingCycle === "monthly" ? "/Monthly" : "/Yearly";
+
   return (
     <Card
       className={`flex flex-col h-full !rounded-2xl !shadow-lg !text-left 
@@ -37,8 +44,8 @@ const PlanCard: React.FC<PlanCardProps> = ({
 
         {/* Price */}
         <div className="mb-6">
-          <span className="text-4xl font-bold text-teal-400">{price}</span>
-          <span className="text-gray-400">{period}</span>
+          <span className="text-4xl font-bold text-teal-400">${price}</span>
+          <span className="text-gray-400">{cycleLabel}</span>
         </div>
 
         {/* Features */}
